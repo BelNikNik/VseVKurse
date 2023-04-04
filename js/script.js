@@ -44,21 +44,51 @@ if (iconMenu) {
 	});
 }
 
+// Прокрутка при клике
+const menuLinks = document.querySelectorAll('.header__link[data-goto]');
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock')
+				iconMenu.classList.remove('_active');
+				menuBody.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
+
 // аккодион 
 
-/* const accordion = document.querySelector('tenth-block__accordion');
+const accordion = document.querySelector('.accordion-body__accordion');
+const accordianLabel = document.querySelector('.accordion-body__accordion-label');
+const accordionContent = document.querySelector('.accordion-body__accordion-content');
 if (accordion) {
 	accordion.addEventListener("click", function (e) {
-		
-		accordion.classList.toggle('_active');
-		
+		accordion.classList.toggle('active');
+		accordianLabel.classList.toggle('active');
+		accordionContent.classList.toggle('active');
 	});
-} */
+}
 
-const accordion = document.getElementsByClassName('accordion-body__accordion');
+/* const accordion = document.getElementsByClassName('accordion-body__accordion');
 
 for (i = 0; i < accordion.length; i++) {
 	accordion[i].addEventListener('click', function () {
 		this.classList.toggle('active')
 	})
-};
+}; */

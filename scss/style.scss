@@ -114,6 +114,10 @@ body {
 	font-family: "Gilroy", "Inter";
 }
 
+body._lock {
+	overflow: hidden;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -194,7 +198,7 @@ body {
 		.header {
 			&__menu-icon {
 				display: block;
-				z-index: 60;
+				z-index: 100;
 				position: relative;
 				top: 0;
 				left: 0;
@@ -257,7 +261,7 @@ body {
 				align-items: center;
 				flex-direction: column;
 				position: fixed;
-				z-index: 50;
+				z-index: 90;
 				width: 100%;
 				background: #ffffff;
 				border-radius: 10px;
@@ -265,7 +269,6 @@ body {
 				top: 0;
 				right: -100%;
 				transition: all 0.3s ease-in-out;
-
 				&._active {
 					right: 0%;
 				}
@@ -310,6 +313,7 @@ body {
 
 	&__main-block {
 		position: relative;
+		z-index: -1;
 	}
 }
 
@@ -322,7 +326,6 @@ body {
 		position: relative;
 		overflow: hidden;
 		margin-bottom: 200px;
-
 		&::before {
 			content: "";
 			display: block;
@@ -1586,7 +1589,7 @@ body {
 			transform: translateY(-50%);
 		}
 	}
-	&__accordion-label .active::before {
+	&__accordion-label.active::before {
 		content: url(../img/angleDown.png);
 		font-size: 30px;
 	}
@@ -1605,8 +1608,8 @@ body {
 		position: relative;
 		overflow: hidden;
 		transition: 0.5s ease-in-out;
-		&.active {
-			height: 194px;
+		&__accordion-content.active {
+			height: 100px;
 		}
 	}
 }
@@ -1621,7 +1624,7 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		background-color: #3d3d50;
-		
+
 		&::before {
 			content: url(../img/footer-png01.png);
 			margin-top: 54px;
@@ -1748,6 +1751,13 @@ body {
 	// .footer__item-social
 
 	&__item-social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: #6f6f82;
 		&:not(:last-child) {
 			margin-right: 20px;
 		}
@@ -1756,19 +1766,6 @@ body {
 	// .footer__link-social
 
 	&__link-social {
-		color: #6f6f82;
+		color: #3d3d50;
 	}
-
-	// .footer__link-sicial
-
-	&__link-sicial {
-	}
-}
-.fab {
-}
-.fa-vk {
-}
-.fa-telegram {
-}
-.fa-youtube {
 }

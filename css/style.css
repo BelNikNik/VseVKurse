@@ -105,6 +105,10 @@ body {
   font-family: "Gilroy", "Inter";
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,7 +180,7 @@ body {
 @media (max-width: 1070px) {
   .header .header__menu-icon {
     display: block;
-    z-index: 60;
+    z-index: 100;
     position: relative;
     top: 0;
     left: 0;
@@ -246,7 +250,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    z-index: 50;
+    z-index: 90;
     width: 100%;
     background: #ffffff;
     border-radius: 10px;
@@ -298,6 +302,7 @@ body {
 }
 .page__main-block {
   position: relative;
+  z-index: -1;
 }
 
 .main-block__container-background {
@@ -1329,7 +1334,7 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.accordion-body__accordion-label .active::before {
+.accordion-body__accordion-label.active::before {
   content: url(../img/angleDown.png);
   font-size: 30px;
 }
@@ -1348,8 +1353,8 @@ body {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
-.accordion-body__accordion-content.active {
-  height: 194px;
+.accordion-body__accordion-content__accordion-content.active {
+  height: 100px;
 }
 
 .footer__content {
@@ -1479,9 +1484,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer__item-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #6f6f82;
+}
 .footer__item-social:not(:last-child) {
   margin-right: 20px;
 }
 .footer__link-social {
-  color: #6f6f82;
+  color: #3d3d50;
 }
