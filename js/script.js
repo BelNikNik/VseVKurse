@@ -43,3 +43,22 @@ if (iconMenu) {
 		menuBody.classList.toggle('_active');
 	});
 }
+
+// аккодион 
+
+/* const accordion = document.querySelector('tenth-block__accordion');
+if (accordion) {
+	accordion.addEventListener("click", function (e) {
+		
+		accordion.classList.toggle('_active');
+		
+	});
+} */
+
+const accordion = document.getElementsByClassName('accordion-body__accordion');
+
+for (i = 0; i < accordion.length; i++) {
+	accordion[i].addEventListener('click', function () {
+		this.classList.toggle('active')
+	})
+};
