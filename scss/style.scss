@@ -1729,16 +1729,21 @@ body._lock {
 
 	&__list-rules {
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		margin-right: 20px;
 	}
 
 	// .footer__item-ruules
 
-	&__item-ruules {
+	&__item-rules {
 		&:not(:last-child) {
 			margin-right: 20px;
 		}
+	}
+
+	&__link-rules {
+		color: #6f6f82;
 	}
 
 	// .footer__list-social
