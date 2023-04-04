@@ -590,6 +590,10 @@ body {
 		line-height: 150%;
 		color: #3d3d50;
 
+		&_white {
+			color: #ffffff;
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
@@ -1360,7 +1364,6 @@ body {
 	// .form-block__block-links
 
 	&__block-links {
-		padding: 40px;
 	}
 
 	// .form-block__block-link
@@ -1371,6 +1374,16 @@ body {
 		align-items: center;
 		gap: 30px;
 		margin-bottom: 80px;
+		&_pink {
+			background: #eee0da;
+			border-radius: 20px;
+			padding: 40px;
+		}
+		&_green {
+			background: #d2eaf0;
+			border-radius: 20px;
+			padding: 40px;
+		}
 	}
 
 	// .form-block__column
@@ -1502,7 +1515,6 @@ body {
 }
 
 //============TENTH-BLOCK============//
-
 
 //===========FOOTER==============//
 

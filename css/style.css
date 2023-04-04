@@ -547,6 +547,9 @@ body {
   line-height: 150%;
   color: #3d3d50;
 }
+.third-block__item_white {
+  color: #ffffff;
+}
 .third-block__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -1152,9 +1155,6 @@ body {
   color: #6f6f82;
   opacity: 0.5;
 }
-.form-block__block-links {
-  padding: 40px;
-}
 .form-block__block-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1167,6 +1167,16 @@ body {
           align-items: center;
   gap: 30px;
   margin-bottom: 80px;
+}
+.form-block__block-link_pink {
+  background: #eee0da;
+  border-radius: 20px;
+  padding: 40px;
+}
+.form-block__block-link_green {
+  background: #d2eaf0;
+  border-radius: 20px;
+  padding: 40px;
 }
 .form-block__column {
   -webkit-box-flex: 0;
