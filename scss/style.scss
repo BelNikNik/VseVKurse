@@ -2069,16 +2069,6 @@ body._lock {
 		color: #ffffff;
 		overflow: hidden;
 		flex: 0 0 auto;
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 100px;
-			width: 100%;
-			opacity: 0.2;
-			border: 2px solid #6f6f82;
-		}
 	}
 
 

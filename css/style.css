@@ -1970,16 +1970,6 @@ body._lock {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-.eighth-block__number::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 100px;
-  width: 100%;
-  opacity: 0.2;
-  border: 2px solid #6f6f82;
-}
 .eighth-block__title-h5 {
   font-family: "Gilroy";
   font-style: normal;
