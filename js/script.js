@@ -117,13 +117,13 @@ for (i = 0; i < accordion.length; i++) {
 
 //--------SWIPER----------//
 
-const swiperWorks = new Swiper('.works-slider', {
+const swiperSecondBlock = new Swiper('.second-block__swiper', {
 	navigation: {
-		nextEl: '.works-slider__next',
-		prevEl: '.works-slider__prev'
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
 	},
 	slidesPerView: 1,
-	spaceBetween: 10,
+	spaceBetween: 30,
 	autoHeight: true,
 	autoplay: {
 		delay: 3000,
@@ -133,6 +133,47 @@ const swiperWorks = new Swiper('.works-slider', {
 		type: 'bullets',
 		clickable: true,
 		dynamicBullets: true,
+	},
+	speed: 1000,
+})
+
+const swiperFourthBlock = new Swiper('.fourth-block__swiper', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	slidesPerView: 1,
+	spaceBetween: 30,
+	autoHeight: true,
+	autoplay: {
+		delay: 3000,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true,
+	},
+	speed: 1000,
+})
+
+const swiperFifthBlock = new Swiper('.fifth-block__swiper', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	spaceBetween: 30,
+	breakpoints: {
+		550: {
+			slidesPerView: 2,
+		},
+	},
+	autoplay: {
+		delay: 3000,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true,
 	},
 	speed: 1000,
 })

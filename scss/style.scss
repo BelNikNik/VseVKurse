@@ -258,7 +258,7 @@ body._lock {
 
 			&__list {
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
 				flex-direction: column;
 				position: fixed;
@@ -266,7 +266,7 @@ body._lock {
 				width: 100%;
 				background: #ffffff;
 				border-radius: 10px;
-				padding: 25px 50px;
+				padding: 25px;
 				top: 0;
 				right: -100%;
 				transition: all 0.3s ease-in-out;
@@ -595,6 +595,38 @@ body._lock {
 		}
 	}
 }
+.swiper {
+	display: none;
+}
+@media (max-width: 767px) {
+	.second-block__body-flex {
+		display: none;
+	}
+	.swiper {
+		display: block;
+	}
+	.second-block__pagination .swiper-pagination-bullet {
+		background: #3d3d50;
+		margin-right: 20px !important;
+	}
+	.second-block {
+		&__swiper {
+			margin-bottom: 60px;
+		}
+		&__slide {
+			padding: 30px 0;
+		}
+		&__column {
+			flex: 1 1 100%;
+			&:nth-child(2) {
+				margin-top: 0;
+			}
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+	}
+}
 
 //========THIRD-BLOCK=============//
 
@@ -825,7 +857,7 @@ body._lock {
 	}
 }
 
-@media (max-width: 550px) {
+@media (max-width: 767px) {
 	.third-block {
 		&__header {
 			flex-direction: column;
@@ -942,6 +974,31 @@ body._lock {
 	}
 }
 
+.fourth-block__swiper {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.fourth-block__body-flex {
+		display: none;
+	}
+	.fourth-block {
+		&__swiper {
+			display: block;
+		}
+		&__swiper {
+			margin-bottom: 60px;
+		}
+		&__slide {
+			padding: 30px 0;
+		}
+	}
+	.fourth-block__pagination .swiper-pagination-bullet {
+		background: #3d3d50;
+		margin-right: 20px !important;
+	}
+}
+
 //==========FIFTH-BLOCK==============//
 
 .page {
@@ -1030,6 +1087,9 @@ body._lock {
 		text-transform: uppercase;
 		color: #ee786b;
 	}
+	&__swiper {
+		display: none;
+	}
 }
 
 @media (max-width: 1360px) {
@@ -1053,6 +1113,42 @@ body._lock {
 			padding: 30px 0;
 			margin-bottom: 80px;
 		}
+	}
+}
+
+@media (max-width: 767px) {
+	.fifth-block {
+		&__title {
+			text-align: center;
+			margin: 0;
+		}
+		&__body-grid {
+			display: none;
+		}
+		&__swiper {
+			display: block;
+			margin-bottom: 60px;
+		}
+		&__slide {
+			padding: 30px 0;
+		}
+		&__grid-image {
+			position: relative;
+			height: 356px;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 20px;
+			}
+		}
+	}
+	.fifth-block__pagination .swiper-pagination-bullet {
+		background: #3d3d50;
+		margin-right: 20px !important;
 	}
 }
 
