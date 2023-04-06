@@ -72,7 +72,7 @@ if (menuLinks.length > 0) {
 	}
 }
 
-// аккодион 
+// аккордион 
 
 const accordion = document.querySelector('.accordion-body__accordion');
 const accordianLabel = document.querySelector('.accordion-body__accordion-label');

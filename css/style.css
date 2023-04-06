@@ -161,7 +161,7 @@ body._lock {
   display: flex;
 }
 .header__item:not(:last-child) {
-  margin: 0 29px 0 0;
+  margin: 0 30px 0 0;
 }
 .header__link {
   font-family: "Gilroy";
@@ -265,7 +265,10 @@ body._lock {
     right: 0%;
   }
   .header__item:not(:last-child) {
-    margin: 0;
+    margin: 0 0 30px 0;
+  }
+  .header__link {
+    font-size: 30px;
   }
   .header__menu {
     display: -webkit-box;
