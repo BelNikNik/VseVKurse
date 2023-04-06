@@ -2072,15 +2072,21 @@ body._lock {
   content: url(../img/angle.png);
   position: absolute;
   top: 50%;
-  right: -35px;
+  right: -25px;
   font-size: 30px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .accordion-body__accordion-label.active::before {
-  content: url(../img/angleDown.png);
+  content: url(../img/angle.png);
   font-size: 30px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .accordion-body__accordion-content {
   font-family: "Gilroy";
@@ -2107,6 +2113,28 @@ body._lock {
   }
   .accordion-body__accordion-content {
     font-size: calc(14px + 3 * (100vw - 320px) / 1280);
+  }
+}
+@media (max-width: 585px) {
+  .tenth-block__accordion-label {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 140%;
+    color: #3d3d50;
+    position: relative;
+    cursor: pointer;
+  }
+  .tenth-block__accordion-label::before {
+    content: url(../img/angle.png);
+    position: absolute;
+    top: 50%;
+    right: -85px;
+    font-size: 30px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 .footer__content {

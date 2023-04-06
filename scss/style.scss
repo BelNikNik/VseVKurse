@@ -2301,11 +2301,13 @@ body._lock {
 			right: -25px;
 			font-size: 30px;
 			transform: translateY(-50%);
+			transition: all 0.3s ease-in-out;
 		}
 	}
 	&__accordion-label.active::before {
-		content: url(../img/angleDown.png);
+		content: url(../img/angle.png);
 		font-size: 30px;
+		transform: rotate(180deg);
 	}
 
 	// .accordion-body__accordion-content
@@ -2335,6 +2337,28 @@ body._lock {
 		}
 		&__accordion-content {
 			font-size: calc(14px + (17 - 14) * ((100vw - 320px) / (1600 - 320)));
+		}
+	}
+}
+@media (max-width: 585px) {
+	.tenth-block {
+		&__accordion-label {
+			font-family: "Gilroy";
+			font-style: normal;
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 140%;
+			color: #3d3d50;
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: url(../img/angle.png);
+				position: absolute;
+				top: 50%;
+				right: -85px;
+				font-size: 30px;
+				transform: translateY(-50%);
+			}
 		}
 	}
 }
