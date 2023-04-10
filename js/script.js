@@ -72,6 +72,33 @@ if (menuLinks.length > 0) {
 	}
 }
 
+const menuLinksFooter = document.querySelectorAll('.footer__link[data-goto]');
+if (menuLinksFooter.length > 0) {
+	menuLinksFooter.forEach(menuLinkFooter => {
+		menuLinkFooter.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLinkFooter = e.target;
+		if (menuLinkFooter.dataset.goto && document.querySelector(menuLinkFooter.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLinkFooter.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.footer').offsetHeight;
+
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock')
+				iconMenu.classList.remove('_active');
+				menuBody.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
+
 // аккордион 
 
 const accordion = document.querySelector('.accordion-body__accordion');
@@ -124,7 +151,6 @@ const swiperSecondBlock = new Swiper('.second-block__swiper', {
 	},
 	slidesPerView: 1,
 	spaceBetween: 30,
-	autoHeight: true,
 	autoplay: {
 		delay: 3000,
 	},
