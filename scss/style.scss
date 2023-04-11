@@ -983,10 +983,12 @@ body._lock {
 .fourth-block__swiper {
 	display: none;
 }
-
 @media (max-width: 767px) {
 	.fourth-block__body-flex {
 		display: none;
+	}
+	.fourth-block__swiper {
+		display: block;
 	}
 	.fourth-block {
 		&__swiper {
@@ -1554,6 +1556,9 @@ body._lock {
 		}
 		&__text {
 			font-size: 15px;
+		}
+		&__video-container {
+			margin: 0;
 		}
 	}
 }
@@ -2362,6 +2367,11 @@ body._lock {
 			color: #6f6f82;
 			opacity: 0.5;
 		}
+		@media (max-width: 425px) {
+			input {
+				font-size: 14px;
+			}
+		}
 	}
 
 	// .form-block__image
@@ -2500,6 +2510,9 @@ body._lock {
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
+		@media (max-width: 576px) {
+			padding: 30px 60px 30px 20px;
+		}
 	}
 
 	// .accordion-body__accordion-label
@@ -2521,7 +2534,11 @@ body._lock {
 			font-size: 30px;
 			transform: translateY(-50%);
 			transition: all 0.3s ease-in-out;
+			@media (max-width: 576px) {
+				right: -35px;
+			}
 		}
+		
 	}
 	&__accordion-label.active::before {
 		content: url(../img/angle.png);
