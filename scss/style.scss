@@ -840,7 +840,6 @@ body._lock {
 			}
 		}
 		&__card {
-			justify-content: space-evenly;
 			flex-direction: row;
 			padding: 20px 30px;
 		}
@@ -848,6 +847,8 @@ body._lock {
 			display: flex;
 			justify-content: start;
 			flex-direction: column;
+			width: 169px;
+			margin-right: 50px;
 		}
 		&__image {
 			position: relative;

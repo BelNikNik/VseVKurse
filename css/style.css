@@ -806,9 +806,6 @@ body._lock {
     grid-row: 3/3;
   }
   .third-block__card {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -826,6 +823,8 @@ body._lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 169px;
+    margin-right: 50px;
   }
   .third-block__image {
     position: relative;
