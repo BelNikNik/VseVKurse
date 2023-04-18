@@ -105,10 +105,9 @@ body {
   font-family: "Gilroy", "Inter";
 }
 
-body._lock {
-  overflow: hidden;
-}
-
+/* body._lock {
+	overflow: hidden;
+} */
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
