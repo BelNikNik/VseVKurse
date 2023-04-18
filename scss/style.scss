@@ -2780,6 +2780,7 @@ body {
 				display: none;
 			}
 			position: relative;
+			overflow: hidden;
 			&::after {
 				position: absolute;
 				width: 100%;

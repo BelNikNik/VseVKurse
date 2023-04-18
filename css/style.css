@@ -2602,6 +2602,7 @@ body {
   .footer__content {
     padding: 41px 34px;
     position: relative;
+    overflow: hidden;
   }
   .footer__content::before {
     display: none;
