@@ -316,9 +316,6 @@ body {
 
 .page {
 	flex: 1 1 auto;
-
-	&__main-block {
-	}
 }
 
 //==============MAIN-BLOCK================//
@@ -2836,6 +2833,7 @@ body {
 		}
 		&__content {
 			position: relative;
+			overflow: hidden;
 			&::after {
 				position: absolute;
 				width: 100%;

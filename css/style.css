@@ -304,6 +304,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+
 .main-block__container-background {
   background: #d2eaf0;
   border-radius: 20px;
@@ -2671,6 +2672,7 @@ body {
   }
   .footer__content {
     position: relative;
+    overflow: hidden;
   }
   .footer__content::after {
     position: absolute;
