@@ -52,6 +52,13 @@ for (let anchor of anchors) {
 	anchor.addEventListener('click', function(e) {
 		e.preventDefault();
 
+
+		if (iconMenu.classList.contains('_active')) {
+			document.body.classList.remove('_lock')
+			iconMenu.classList.remove('_active');
+			menuBody.classList.remove('_active');
+		}
+
 		const blockId = anchor.getAttribute('href').substring(1);
 		document.getElementById(blockId).scrollIntoView({
 			behavior: 'smooth',
